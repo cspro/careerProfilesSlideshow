@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Career Profiles Slideshow</title>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/vendor/modernizr.custom.js"></script>
+		
+	</head>
+	<body>
+		<div class="container">	
+			<div id="cbp-fwslider" class="cbp-fwslider">
+				<ul>
+					<li class="slide slide1"><p>Slide 1 Content</p></li>
+					<li class="slide slide2"><p>Slide 2 Content</p></li>
+					<li class="slide slide3"><p>Slide 3 Content</p></li>
+					<li class="slide slide4"><p>Slide 4 Content</p></li>
+					<li class="slide slide5"><p>Slide 5 Content</p></li>
+					<li class="slide slide6"><p>Slide 6 Content</p></li>
+					<li class="slide slide7"><p>Slide 7 Content</p></li>
+					<li class="slide slide8"><p>Slide 8 Content</p></li>
+				</ul>
+			</div>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/vendor/jquery.cbpFWSlider.js"></script>
+		<script>
+			$( function() {
+				/*
+				- how to call the plugin:
+				$( selector ).cbpFWSlider( [options] );
+				- options:
+				{
+					// default transition speed (ms)
+					speed : 500,
+					// default transition easing
+					easing : 'ease'
+				}
+				- destroy:
+				$( selector ).cbpFWSlider( 'destroy' );
+				*/
+
+				$( '#cbp-fwslider' ).cbpFWSlider();
+
+			} );
+		</script>
+	</body>
+</html>

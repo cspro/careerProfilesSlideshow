@@ -1,0 +1,459 @@
+* {
+  font-family: "Open Sans" !important;
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+body {
+  background-color: #bbbbbb;
+}
+
+a {
+  color: white;
+  border-radius: 3px;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.35em;
+}
+
+h3 {
+  font-size: 1.15em;
+}
+
+h1, h2, h3, h4 {
+  color: #333333;
+  margin-top: 0;
+}
+
+img.no-resize {
+  max-width: none;
+}
+
+img, area, map {
+  outline: none;
+}
+
+.spaceBelow {
+  margin-bottom: 1em;
+}
+
+.spaceAbove {
+  margin-top: 1em;
+}
+
+.allCaps {
+  text-transform: uppercase;
+}
+
+.tooltip-inner {
+  max-width: 300px;
+  min-width: 50px;
+  font-size: 10px !important;
+}
+
+.table {
+  display: table;
+  margin: 0;
+}
+
+/* override Bootstrap default, which makes this white for some reason */
+.table .table {
+  background-color: transparent;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 768px;
+  height: 400px;
+}
+
+.loading {
+  display: block;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+  top: 50%;
+  left: 50%;
+}
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops and up) */
+@media (min-width: 992px) {
+  .hiddenAtLarge {
+    /* Fix for IE10 clearing issue */
+    display: none !important;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+.cbp-fwslider {
+  position: relative;
+  overflow: hidden;
+}
+.cbp-fwslider ul {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  list-style-type: none;
+}
+.cbp-fwslider ul li {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.cbp-fwslider ul li > a,
+.cbp-fwslider ul li > div {
+  display: block;
+  text-align: center;
+  outline: none;
+}
+.cbp-fwslider ul li > a img {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  max-width: 75%;
+}
+.cbp-fwslider nav span {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 100px;
+  background: #47a3da;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  margin-top: -50px;
+  line-height: 100px;
+  cursor: pointer;
+  font-weight: normal;
+}
+.cbp-fwslider nav span:hover {
+  background: #378fc3;
+}
+.cbp-fwslider nav span.cbp-fwnext {
+  right: 0px;
+}
+.cbp-fwslider nav span.cbp-fwprev {
+  left: 0px;
+}
+
+.cbp-fwdots {
+  position: absolute;
+  bottom: 0px;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+}
+.cbp-fwdots span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #ddd;
+  margin: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cbp-fwdots span:hover {
+  background: #999;
+}
+.cbp-fwdots span.cbp-fwcurrent {
+  background: #47a3da;
+  box-shadow: 0 0 0 2px #47a3da;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  -moz-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.slide {
+  width: 768px;
+  height: 400px;
+  background-color: white;
+}
+
+.slide1 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide1.png");
+}
+
+.slide2 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide2.png");
+}
+
+.slide3 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide3.png");
+}
+
+.slide4 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide4.png");
+}
+
+.slide5 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide5.png");
+}
+
+.slide6 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide6.png");
+}
+
+.slide7 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide7.png");
+}
+
+.slide8 {
+  background-image: url("../images/FM-Infographic5-animation_fm-info-slide8.png");
+}
+
+.blockContainer {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+.blockContainer .blockInner {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.reveal-animation {
+  opacity: 1;
+}
+
+.reveal-animation.ng-hide {
+  opacity: 0;
+}
+
+.reveal-animation.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.goingDown .reveal-animation {
+  position: absolute;
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.goingDown .reveal-animation.ng-enter {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(-500px);
+  transform: translateZ(-500px);
+}
+.goingDown .reveal-animation.ng-enter.ng-enter-active {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.goingDown .reveal-animation.ng-leave {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+  z-index: 100;
+}
+.goingDown .reveal-animation.ng-leave.ng-leave-active {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(500px);
+  transform: translateZ(500px);
+  z-index: 100;
+}
+.goingDown .ng-leave .blockInner {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: rotateY(45deg);
+  transform: rotateY(45deg);
+  border: 1px solid white;
+  opacity: 0;
+}
+.goingDown .ng-leave .block-0 {
+  transform: translateZ(375px) rotateZ(15deg) translateX(-37.5px) translateY(-37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(15deg) translateX(-37.5px) translateY(-37.5px);
+}
+.goingDown .ng-leave .block-1 {
+  transform: translateZ(225px) rotateZ(-5deg) translateX(-22.5px) translateY(-22.5px);
+  -webkit-transform: translateZ(225px) rotateZ(-5deg) translateX(-22.5px) translateY(-22.5px);
+}
+.goingDown .ng-leave .block-2 {
+  transform: translateZ(975px) rotateZ(10deg) translateX(-97.5px) translateY(-97.5px);
+  -webkit-transform: translateZ(975px) rotateZ(10deg) translateX(-97.5px) translateY(-97.5px);
+}
+.goingDown .ng-leave .block-3 {
+  transform: translateZ(375px) rotateZ(-12deg) translateX(-37.5px) translateY(-37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(-12deg) translateX(-37.5px) translateY(-37.5px);
+}
+.goingDown .ng-leave .block-4 {
+  transform: translateZ(900px) rotateZ(-15deg) translateX(90px) translateY(-90px);
+  -webkit-transform: translateZ(900px) rotateZ(-15deg) translateX(90px) translateY(-90px);
+}
+.goingDown .ng-leave .block-5 {
+  transform: translateZ(525px) rotateZ(10deg) translateX(-105.0px) translateY(15px);
+  -webkit-transform: translateZ(525px) rotateZ(10deg) translateX(-105.0px) translateY(15px);
+}
+.goingDown .ng-leave .block-6 {
+  transform: translateZ(1200px) rotateZ(-15deg) translateX(-120px) translateY(-120px);
+  -webkit-transform: translateZ(1200px) rotateZ(-15deg) translateX(-120px) translateY(-120px);
+}
+.goingDown .ng-leave .block-7 {
+  transform: translateZ(375px) rotateZ(10deg) translateX(37.5px) translateY(37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(10deg) translateX(37.5px) translateY(37.5px);
+}
+.goingDown .ng-leave .block-8 {
+  transform: translateZ(750px) rotateZ(18deg) translateX(-75px) translateY(-75px);
+  -webkit-transform: translateZ(750px) rotateZ(18deg) translateX(-75px) translateY(-75px);
+}
+.goingDown .ng-leave .block-9 {
+  transform: translateZ(375px) rotateZ(-6deg) translateX(37.5px) translateY(37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(-6deg) translateX(37.5px) translateY(37.5px);
+}
+.goingDown .ng-enter-active .blockInner {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+/*
+    .block-0 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+    .block-1 {transition-delay: $delay*0.15;
+      -webkit-transition-delay: $delay*0.15;}
+    .block-2 {transition-delay: $delay*0.65;
+      -webkit-transition-delay: $delay*0.65;}
+    .block-3 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+    .block-4 {transition-delay: $delay*0.60;
+      -webkit-transition-delay: $delay*0.60;}
+    .block-5 {transition-delay: $delay*0.10;
+      -webkit-transition-delay: $delay*0.10;}
+    .block-6 {transition-delay: $delay*0.80;
+      -webkit-transition-delay: $delay*0.80;}
+    .block-7 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+    .block-8 {transition-delay: $delay*0.50;
+      -webkit-transition-delay: $delay*0.50;}
+    .block-9 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+*/
+.goingUp .reveal-animation {
+  position: absolute;
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+}
+.goingUp .reveal-animation.ng-enter {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(500px);
+  transform: translateZ(500px);
+  opacity: 1;
+}
+.goingUp .reveal-animation.ng-enter.ng-enter-active {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+  opacity: 1;
+}
+.goingUp .reveal-animation.ng-leave {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+  opacity: 1;
+  z-index: 100;
+}
+.goingUp .reveal-animation.ng-leave.ng-leave-active {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(-500px);
+  transform: translateZ(-500px);
+  z-index: 100;
+  opacity: 0;
+}
+.goingUp .ng-enter .blockInner {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: rotateY(45deg);
+  transform: rotateY(45deg);
+  border: 2px solid white;
+}
+.goingUp .ng-enter .block-0 {
+  transform: translateZ(375px) rotateZ(15deg) translateX(-37.5px) translateY(-37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(15deg) translateX(-37.5px) translateY(-37.5px);
+}
+.goingUp .ng-enter .block-1 {
+  transform: translateZ(225px) rotateZ(-5deg) translateX(-22.5px) translateY(-22.5px);
+  -webkit-transform: translateZ(225px) rotateZ(-5deg) translateX(-22.5px) translateY(-22.5px);
+}
+.goingUp .ng-enter .block-2 {
+  transform: translateZ(975px) rotateZ(10deg) translateX(-97.5px) translateY(-97.5px);
+  -webkit-transform: translateZ(975px) rotateZ(10deg) translateX(-97.5px) translateY(-97.5px);
+}
+.goingUp .ng-enter .block-3 {
+  transform: translateZ(375px) rotateZ(-12deg) translateX(-37.5px) translateY(-37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(-12deg) translateX(-37.5px) translateY(-37.5px);
+}
+.goingUp .ng-enter .block-4 {
+  transform: translateZ(900px) rotateZ(-15deg) translateX(90px) translateY(-90px);
+  -webkit-transform: translateZ(900px) rotateZ(-15deg) translateX(90px) translateY(-90px);
+}
+.goingUp .ng-enter .block-5 {
+  transform: translateZ(525px) rotateZ(10deg) translateX(-105.0px) translateY(15px);
+  -webkit-transform: translateZ(525px) rotateZ(10deg) translateX(-105.0px) translateY(15px);
+}
+.goingUp .ng-enter .block-6 {
+  transform: translateZ(1200px) rotateZ(-15deg) translateX(-120px) translateY(-120px);
+  -webkit-transform: translateZ(1200px) rotateZ(-15deg) translateX(-120px) translateY(-120px);
+}
+.goingUp .ng-enter .block-7 {
+  transform: translateZ(375px) rotateZ(10deg) translateX(37.5px) translateY(37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(10deg) translateX(37.5px) translateY(37.5px);
+}
+.goingUp .ng-enter .block-8 {
+  transform: translateZ(750px) rotateZ(18deg) translateX(-75px) translateY(-75px);
+  -webkit-transform: translateZ(750px) rotateZ(18deg) translateX(-75px) translateY(-75px);
+}
+.goingUp .ng-enter .block-9 {
+  transform: translateZ(375px) rotateZ(-6deg) translateX(37.5px) translateY(37.5px);
+  -webkit-transform: translateZ(375px) rotateZ(-6deg) translateX(37.5px) translateY(37.5px);
+}
+.goingUp .ng-enter-active .blockInner {
+  -webkit-transition: all 1.25s ease 0s;
+  transition: all 1.25s ease 0s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+/*# sourceMappingURL=main.css.map */

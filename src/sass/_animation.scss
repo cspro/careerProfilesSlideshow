@@ -1,0 +1,215 @@
+$animParams: all 1.25s ease 0s;
+$enterScale: 0.25;
+$leaveScale: 2;
+$outerZScale: 500px;
+$innerZScale: 1500px;
+$finalOpacity: 0;
+$delay: 1s;
+
+.blockContainer {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  .blockInner {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.initial {}
+
+.reveal-animation {
+  opacity: 1;
+}
+.reveal-animation.ng-hide {
+  opacity: 0;
+}
+.reveal-animation.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.goingDown {
+
+  .reveal-animation {
+    position: absolute;
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+  }
+  
+  .reveal-animation.ng-enter {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(-$outerZScale);
+    transform: translateZ(-$outerZScale);
+  } 
+  
+  .reveal-animation.ng-enter.ng-enter-active {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+  }
+  .reveal-animation.ng-leave {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    z-index: 100;
+  }
+  .reveal-animation.ng-leave.ng-leave-active {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ($outerZScale);
+    transform: translateZ($outerZScale);
+    // opacity: $finalOpacity;
+    z-index: 100;
+
+  }
+  .ng-leave {
+    .blockInner {
+      -webkit-transition: $animParams;
+      transition: $animParams;
+      -webkit-transform: rotateY(45deg);
+      transform: rotateY(45deg);
+      border: 1px solid white;
+      opacity: $finalOpacity;
+    }
+    .block-0 {transform: translateZ( $innerZScale*0.25) rotateZ( 15deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025); // rotateY(45deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ( 15deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025);}// rotateY(45deg) rotateX(25deg)
+    .block-1 {transform: translateZ( $innerZScale*0.15) rotateZ(-05deg) translateX(-$innerZScale*0.015) translateY(-$innerZScale*0.015); // rotateY(15deg) rotateX(15deg)
+      -webkit-transform: translateZ( $innerZScale*0.15) rotateZ(-05deg) translateX(-$innerZScale*0.015) translateY(-$innerZScale*0.015);}// rotateY(15deg) rotateX(15deg)
+    .block-2 {transform: translateZ( $innerZScale*0.65) rotateZ( 10deg) translateX(-$innerZScale*0.065) translateY(-$innerZScale*0.065); // rotateY(35deg) rotateX(35deg)
+      -webkit-transform: translateZ( $innerZScale*0.65) rotateZ( 10deg) translateX(-$innerZScale*0.065) translateY(-$innerZScale*0.065);}// rotateY(35deg) rotateX(35deg)
+    .block-3 {transform: translateZ( $innerZScale*0.25) rotateZ(-12deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025); // rotateY(30deg) rotateX(30deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ(-12deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025);}// rotateY(30deg) rotateX(30deg)
+    .block-4 {transform: translateZ( $innerZScale*0.60) rotateZ(-15deg) translateX( $innerZScale*0.060) translateY(-$innerZScale*0.060); // rotateY(20deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.60) rotateZ(-15deg) translateX( $innerZScale*0.060) translateY(-$innerZScale*0.060);}// rotateY(20deg) rotateX(25deg)
+    .block-5 {transform: translateZ( $innerZScale*0.35) rotateZ( 10deg) translateX(-$innerZScale*0.070) translateY( $innerZScale*0.010); // rotateY(40deg) rotateX(20deg)
+      -webkit-transform: translateZ( $innerZScale*0.35) rotateZ( 10deg) translateX(-$innerZScale*0.070) translateY( $innerZScale*0.010);}// rotateY(40deg) rotateX(20deg)
+    .block-6 {transform: translateZ( $innerZScale*0.80) rotateZ(-15deg) translateX(-$innerZScale*0.080) translateY(-$innerZScale*0.080); // rotateY(15deg) rotateX(15deg)
+      -webkit-transform: translateZ( $innerZScale*0.80) rotateZ(-15deg) translateX(-$innerZScale*0.080) translateY(-$innerZScale*0.080);}// rotateY(15deg) rotateX(15deg)
+    .block-7 {transform: translateZ( $innerZScale*0.25) rotateZ( 10deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025); // rotateY(10deg) rotateX(10deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ( 10deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025);}// rotateY(10deg) rotateX(10deg)
+    .block-8 {transform: translateZ( $innerZScale*0.50) rotateZ( 18deg) translateX(-$innerZScale*0.050) translateY(-$innerZScale*0.050); // rotateY(45deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.50) rotateZ( 18deg) translateX(-$innerZScale*0.050) translateY(-$innerZScale*0.050);}// rotateY(45deg) rotateX(25deg)
+    .block-9 {transform: translateZ( $innerZScale*0.25) rotateZ(-06deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025); // rotateY(25deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ(-06deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025);}// rotateY(25deg) rotateX(25deg)
+  }
+  
+  .ng-enter-active {
+    .blockInner {
+      -webkit-transition: $animParams;
+      transition: $animParams;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      border: 1px solid rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+/*
+    .block-0 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+    .block-1 {transition-delay: $delay*0.15;
+      -webkit-transition-delay: $delay*0.15;}
+    .block-2 {transition-delay: $delay*0.65;
+      -webkit-transition-delay: $delay*0.65;}
+    .block-3 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+    .block-4 {transition-delay: $delay*0.60;
+      -webkit-transition-delay: $delay*0.60;}
+    .block-5 {transition-delay: $delay*0.10;
+      -webkit-transition-delay: $delay*0.10;}
+    .block-6 {transition-delay: $delay*0.80;
+      -webkit-transition-delay: $delay*0.80;}
+    .block-7 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+    .block-8 {transition-delay: $delay*0.50;
+      -webkit-transition-delay: $delay*0.50;}
+    .block-9 {transition-delay: $delay*0.25;
+      -webkit-transition-delay: $delay*0.25;}
+*/
+
+.goingUp {
+
+  .reveal-animation {
+    position: absolute;
+    -webkit-transition: $animParams;
+    transition: $animParams;
+  }
+  
+  .reveal-animation.ng-enter {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ($outerZScale);
+    transform: translateZ($outerZScale);
+    opacity: 1;
+  } 
+  
+  .reveal-animation.ng-enter.ng-enter-active {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+  .reveal-animation.ng-leave {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    opacity: 1;
+    z-index: 100;
+  }
+  .reveal-animation.ng-leave.ng-leave-active {
+    -webkit-transition: $animParams;
+    transition: $animParams;
+    -webkit-transform: translateZ(-$outerZScale);
+    transform: translateZ(-$outerZScale);
+    z-index: 100;
+    opacity: $finalOpacity;
+  }
+  
+  .ng-enter {
+    .blockInner {
+      -webkit-transition: $animParams;
+      transition: $animParams;
+      -webkit-transform: rotateY(45deg);
+      transform: rotateY(45deg);
+      border: 2px solid white;
+    }
+    .block-0 {transform: translateZ( $innerZScale*0.25) rotateZ( 15deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025); // rotateY(45deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ( 15deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025);}// rotateY(45deg) rotateX(25deg)
+    .block-1 {transform: translateZ( $innerZScale*0.15) rotateZ(-05deg) translateX(-$innerZScale*0.015) translateY(-$innerZScale*0.015); // rotateY(15deg) rotateX(15deg)
+      -webkit-transform: translateZ( $innerZScale*0.15) rotateZ(-05deg) translateX(-$innerZScale*0.015) translateY(-$innerZScale*0.015);}// rotateY(15deg) rotateX(15deg)
+    .block-2 {transform: translateZ( $innerZScale*0.65) rotateZ( 10deg) translateX(-$innerZScale*0.065) translateY(-$innerZScale*0.065); // rotateY(35deg) rotateX(35deg)
+      -webkit-transform: translateZ( $innerZScale*0.65) rotateZ( 10deg) translateX(-$innerZScale*0.065) translateY(-$innerZScale*0.065);}// rotateY(35deg) rotateX(35deg)
+    .block-3 {transform: translateZ( $innerZScale*0.25) rotateZ(-12deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025); // rotateY(30deg) rotateX(30deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ(-12deg) translateX(-$innerZScale*0.025) translateY(-$innerZScale*0.025);}// rotateY(30deg) rotateX(30deg)
+    .block-4 {transform: translateZ( $innerZScale*0.60) rotateZ(-15deg) translateX( $innerZScale*0.060) translateY(-$innerZScale*0.060); // rotateY(20deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.60) rotateZ(-15deg) translateX( $innerZScale*0.060) translateY(-$innerZScale*0.060);}// rotateY(20deg) rotateX(25deg)
+    .block-5 {transform: translateZ( $innerZScale*0.35) rotateZ( 10deg) translateX(-$innerZScale*0.070) translateY( $innerZScale*0.010); // rotateY(40deg) rotateX(20deg)
+      -webkit-transform: translateZ( $innerZScale*0.35) rotateZ( 10deg) translateX(-$innerZScale*0.070) translateY( $innerZScale*0.010);}// rotateY(40deg) rotateX(20deg)
+    .block-6 {transform: translateZ( $innerZScale*0.80) rotateZ(-15deg) translateX(-$innerZScale*0.080) translateY(-$innerZScale*0.080); // rotateY(15deg) rotateX(15deg)
+      -webkit-transform: translateZ( $innerZScale*0.80) rotateZ(-15deg) translateX(-$innerZScale*0.080) translateY(-$innerZScale*0.080);}// rotateY(15deg) rotateX(15deg)
+    .block-7 {transform: translateZ( $innerZScale*0.25) rotateZ( 10deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025); // rotateY(10deg) rotateX(10deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ( 10deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025);}// rotateY(10deg) rotateX(10deg)
+    .block-8 {transform: translateZ( $innerZScale*0.50) rotateZ( 18deg) translateX(-$innerZScale*0.050) translateY(-$innerZScale*0.050); // rotateY(45deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.50) rotateZ( 18deg) translateX(-$innerZScale*0.050) translateY(-$innerZScale*0.050);}// rotateY(45deg) rotateX(25deg)
+    .block-9 {transform: translateZ( $innerZScale*0.25) rotateZ(-06deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025); // rotateY(25deg) rotateX(25deg)
+      -webkit-transform: translateZ( $innerZScale*0.25) rotateZ(-06deg) translateX( $innerZScale*0.025) translateY( $innerZScale*0.025);}// rotateY(25deg) rotateX(25deg)
+  }
+  
+  .ng-enter-active {
+    .blockInner {
+      -webkit-transition: $animParams;
+      transition: $animParams;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      border: 1px solid rgba(255, 255, 255, 0);
+    }
+  }
+  
+}

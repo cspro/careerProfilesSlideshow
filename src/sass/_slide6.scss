@@ -1,0 +1,46 @@
+.slide6 {
+  .t1 {
+    top: 48px;
+    left: 177px;
+    width: 355px;
+    font-size: 16px;
+  }
+  .t2 {
+    top: 130px;
+    left: 30px;
+    width: 380px;
+  }
+  .t3 {
+    top: 130px;
+    left: 425px;
+    width: 165px;
+  }
+  .t4 {
+    top: 130px;
+    left: 615px;
+    width: 125px;
+  }
+  .g1, .g2 {
+    opacity: 0;
+    top: 225px;
+    width: 530px;
+    height: 150px;
+  }
+  .g1 {
+    @include transition-delay(1s);
+    background-image: url("../images/6-people1.png");
+    opacity: 0;
+    left: 0px;
+  }
+  .g2 {
+    @include transition-delay(1.5s);
+    background-image: url("../images/6-people2.png");
+    opacity: 0;
+    left: 130px;
+  }
+  &.active {
+    .g1, .g2 {
+      opacity: 1;
+    }
+  }
+}

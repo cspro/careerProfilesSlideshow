@@ -1,0 +1,87 @@
+.slide8 {
+  .t1 {
+    top: 100px;
+    left: 45px;
+    width: 165px;
+    font-size: 16px;
+  }
+  .t2 {
+    top: 115px;
+    left: 340px;
+    width: 205px;
+  }
+  .t3 {
+    top: 20px;
+    left: 580px;
+    width: 160px;
+  }
+  .g1 {
+    @include transition-delay(0.25s);
+    background-color: $red3;
+    top: 0;
+    left: 310px;
+    width: 0px;
+    height: 100px;
+  }
+  .g2 {
+    @include transition-delay(0.75s);
+    background-image: url("../images/8-bubble-left.png");
+    top: 230px;
+    left: 360px;
+    width: 70px;
+    height: 62px;
+    opacity: 0;
+  }
+  .g3 {
+    @include transition-delay(1s);
+    background-image: url("../images/8-bubble-right.png");
+    top: 230px;
+    left: 535px;
+    width: 70px;
+    height: 62px;
+    opacity: 0;
+  }
+  .g4 {
+    @include transition-delay(1.25s);
+    background-color: $red2;
+    bottom: 0;
+    right: 0px;
+    width: 108px;
+    height: 0px;
+  }
+  .g5 {
+    background-image: url("../images/8-gear1.png");
+    width: 64px;
+    height: 64px;
+    top: 12px;
+    left: 413px;
+    @include animation('cwRotate 5s linear infinite');
+  }
+  .g6 {
+    background-image: url("../images/8-gear2.png");
+    width: 64px;
+    height: 64px;
+    top: 34px;
+    left: 371px;
+    @include animation('ccwRotate 5s linear infinite');
+  }
+  &.active {
+    .g1 {
+      width: 240px;
+    }
+    .g2 {
+      top: 210px;
+      left: 340px;
+      opacity: 1;
+    }
+    .g3 {
+      top: 210px;
+      left: 555px;
+      opacity: 1;
+    }
+    .g4 {
+      height: 132px;
+    }
+  }
+
+}

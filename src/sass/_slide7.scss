@@ -1,0 +1,60 @@
+.slide7 {
+  .t1 {
+    top: 75px;
+    left: 95px;
+    width: 175px;
+    font-size: 16px;
+  }
+  .t2 {
+    top: 200px;
+    left: 95px;
+    width: 170px;
+  }
+  .t3 {
+    top: 145px;
+    left: 340px;
+    width: 165px;
+  }
+  .t4 {
+    top: 230px;
+    left: 340px;
+    width: 165px;
+  }
+  .g1 {
+    @include transition-delay(0.25s);
+    background-color: $red4;
+    width: 35px;
+    height: 0;
+    top: 339px;
+    left: 0;
+  }
+  .g2 {
+    @include transition-delay(1s);
+    background-color: $red4;
+    width: 0;
+    height: 22px;
+    top: 0;
+    left: 0;
+  }
+  .g3 {
+    @include transition-delay(2s);
+    background-image:url("../images/7-wrench.png");
+    top: 200px;
+    left: 653px;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+  &.active {
+    .g1 {
+      height: 339px;
+      top: 0;
+    }
+    .g2 {
+      width: 456px;
+    }
+    .g3 {
+      opacity: 1;
+    }
+  }
+}

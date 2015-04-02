@@ -21,7 +21,6 @@
    ul li > a,
    ul li > div {
   	display: block;
-  	text-align: center;
   	outline: none;
   }
   
@@ -34,29 +33,45 @@
   
    nav span {
   	position: absolute;
-  	top: 50%;
+  	bottom: 5px;
   	width: 50px;
-  	height: 100px;
-  	background: #47a3da;
-  	color: #fff;
+  	height: 50px;
+  	color: #333;
   	font-size: 50px;
   	text-align: center;
   	margin-top: -50px;
-  	line-height: 100px;
+  	line-height: 50px;
   	cursor: pointer;
   	font-weight: normal;
+  	z-index: 100;
   }
   
    nav span:hover {
-  	background: #378fc3;
+     color: #000;
   }
   
    nav span.cbp-fwnext {
-  	right: 0px;
+  	right: 5px;
+  	width: 0;
+  	height: 0;
+    border-top: 15px solid transparent;
+    border-left: 20px solid $textColor;
+    border-bottom: 15px solid transparent;
+    &:hover {
+      border-left-color: #000;
+    }
   }
   
    nav span.cbp-fwprev {
-  	left: 0px;
+  	right: 35px;
+  	width: 0;
+  	height: 0;
+    border-top: 15px solid transparent;
+    border-right: 20px solid $textColor;
+    border-bottom: 15px solid transparent;
+    &:hover {
+      border-right-color: #000;
+    }
   }
 }
 .cbp-fwdots {
@@ -67,8 +82,8 @@
 	width: 100%;
   span {
   	display: inline-block;
-  	width: 18px;
-  	height: 18px;
+  	width: 10px;
+  	height: 10px;
   	background: #ddd;
   	margin: 4px;
   	border-radius: 50%;
@@ -77,8 +92,8 @@
     	background: #999;
     }
     &.cbp-fwcurrent {
-    	background: #47a3da;
-    	box-shadow: 0 0 0 2px #47a3da;
+    	background: $textColor;
+    	box-shadow: 0 0 0 2px $textColor;
     	-webkit-transition: box-shadow 0.2s ease-in-out;
     	-moz-transition: box-shadow 0.2s ease-in-out;
     	transition: box-shadow 0.2s ease-in-out;

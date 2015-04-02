@@ -1,0 +1,59 @@
+.slide5 {
+  .t1 {
+    top: 77px;
+    left: 97px;
+    width: 155px;
+    font-size: 16px;
+  }
+  .t2 {
+    top: 240px;
+    left: 50px;
+    width: 230px;
+  }
+  .t3 {
+    top: 275px;
+    left: 355px;
+    width: 335px;
+  }
+  .g1 {
+    @include transition-delay(0.5s);
+    background-color: $cream;
+    width: 324px;
+    height: 35px;
+    bottom: 0;
+    left: -324px;
+  }
+  .g2 {
+    @include transition-delay(0.75s);
+    background-image: url("../images/5-puzzle.png");
+    width: 100px;
+    height: 100px;
+    top: 60px;
+    left: 600px;
+    opacity: 0;
+  }
+  .g3 {
+    @include transition-delay(1s);
+    background-image: url("../images/5-questionmark.png");
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 450px;
+    opacity: 0;
+  }
+  &.active {
+    .g1 {
+      left: 0;
+    }
+    .g2 {
+      top: 87px;
+      left: 550px;
+      opacity: 1;
+    }
+    .g3 {
+      top: 40px;
+      left: 460px;
+      opacity: 1;
+    }
+  }
+}

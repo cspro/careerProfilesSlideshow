@@ -1,0 +1,82 @@
+.slide3 {
+  .t1 {
+    top: 40px;
+    left: 80px;
+    width: 265px;
+    font-size: 16px;
+  }
+  .t2 {
+    top: 110px;
+    left: 60px;
+    width: 310px;
+  }
+  .t3 {
+    top: 235px;
+    left: 115px;
+    width: 185px;
+  }
+  .t4 {
+    top: 20px;
+    left: 460px;
+    width: 200px;
+  }
+  .t5 {
+    top: 150px;
+    left: 570px;
+    width: 150px;
+  }
+  .g1 {
+    @include transition-delay(0.25s);
+    width: 92px;
+    height: 200px;
+    top: 400px;
+    left: 0px;
+    background-color: $cream;
+  }
+  .g2 {
+    @include transition-delay(0.25s);
+    top: -130px;
+    right: 0;
+    width: 90px;
+    height: 130px;
+    background-color: $red3;
+  }
+  .g3 {
+    @include transition-delay(0.5s);
+    background-image: url("../images/3-quote-bubble.png");
+    width: 30px;
+    height: 30px;
+    top: 190px;
+    left: 420px;
+    opacity: 0;
+  }
+  .g4 {
+    @include transition-delay(0.75s);
+    background-image: url("../images/3-circle-arrows.png");
+    width: 90px;
+    height: 90px;
+    top: 160px;
+    left: 390px;
+    opacity: 0;
+    -webkit-animation-name: cwRotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: $rotDuration;
+    -webkit-animation-timing-function: linear;
+  }
+  &.active {
+    .g1 {
+      top: 234px;
+    }
+    .g2 {
+      top: 0;
+    }
+    .g3 {
+      opacity: 1;
+    }
+    .g4 {
+      opacity: 1;
+    }
+  }
+
+  
+}

@@ -1,0 +1,61 @@
+.slide1 {
+  .g1 {
+    background-image: url('../images/1-list.png');
+    @include transition-delay(0.5s);
+    opacity: 0;
+    top: 300px;
+    left: 23px;
+    width: 50px;
+    height: 50px;
+  }
+  .g2 {
+    background-image: url('../images/1-laptop.png');
+    @include transition-delay(0.75s);
+    opacity: 0;
+    top: 400px;
+    left: 600px;
+    width: 65px;
+    height: 50px;
+  }
+  .h1 {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 40px;
+    height: 80px;
+    color: white;
+    top: 45px;
+    left: -250px;
+    opacity: 0;
+  }
+  .t1 {
+    top: 55px;
+    left: 650px;
+    opacity: 0;
+    ul {
+      width: 300px;
+      li {
+        margin-bottom: 0.8em;
+      }
+    }
+  }
+  &.active {
+    .h1 {
+      opacity: 1;
+      left: 45px;
+    }
+    .g1 {
+      opacity: 1;
+      top: 277px;
+      left: 123px;
+    }
+    .g2 {
+      opacity: 1;
+      top: 335px;
+      left: 560px;
+    }
+    .t1 {
+      opacity: 1;
+      left: 450px;
+    }
+  }
+}

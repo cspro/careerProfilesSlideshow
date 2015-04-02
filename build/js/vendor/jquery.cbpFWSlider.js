@@ -7,6 +7,9 @@
  * 
  * Copyright 2013, Codrops
  * http://www.codrops.com
+ * 
+ * Modified - Michael Daross, 2015
+ * Added URL Hash navigation
  */
 ;( function( $, window, undefined ) {
 
@@ -23,12 +26,24 @@
 	// the options
 	$.CBPFWSlider.defaults = {
 		// default transition speed (ms)
-		speed : 500,
+		speed : 750,
 		// default transition easing
 		easing : 'ease'
 	};
 
 	$.CBPFWSlider.prototype = {
+		_getUrlParameter : function(sParam) {
+			var sPageURL = window.location.search.substring(1);
+			var sURLVariables = sPageURL.split('&');
+			for (var i = 0; i < sURLVariables.length; i++) 
+			{
+				var sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] == sParam) 
+				{
+			    return sParameterName[1];
+				}
+			}
+		},
 		_init : function( options ) {
 			// options
 			this.options = $.extend( true, {}, $.CBPFWSlider.defaults, options );
@@ -36,6 +51,18 @@
 			this._config();
 			// initialize/bind the events
 			this._initEvents();
+			this._setActiveSlide(0);
+			// get URL hash and navigate as needed
+			this._hashNavigate();
+		},
+		_hashNavigate : function() {
+			var page = window.location.hash.substring(1);
+			if (page && !isNaN(parseInt(page, 10)) && (page<=this.itemsCount)) {
+				//TODO: Handle incorrect hashes (convert to page 1)
+				if (!this.isAnimating) {
+					this._jump(page-1); // array numbering
+				}
+			}
 		},
 		_config : function() {
 
@@ -86,8 +113,8 @@
 			if( this.itemsCount > 1 ) {
 
 				// add navigation arrows (the previous arrow is not shown initially):
-				this.$navPrev = $( '<span class="cbp-fwprev">&lt;</span>' ).hide();
-				this.$navNext = $( '<span class="cbp-fwnext">&gt;</span>' );
+				this.$navPrev = $( '<span class="cbp-fwprev"></span>' ).hide();
+				this.$navNext = $( '<span class="cbp-fwnext"></span>' );
 				$( '<nav/>' ).append( this.$navPrev, this.$navNext ).appendTo( this.$el );
 				// add navigation dots
 				var dots = '';
@@ -110,6 +137,9 @@
 				this.$navNext.on( 'click.cbpFWSlider', $.proxy( this._navigate, this, 'next' ) );
 				this.$navDots.on( 'click.cbpFWSlider', function() { self._jump( $( this ).index() ); } );
 			}
+			$(window).on('hashchange', function() {
+				self._hashNavigate();
+			});
 
 		},
 		_navigate : function( direction ) {
@@ -128,11 +158,13 @@
 			else if( direction === 'previous' && this.current > 0 ) {
 				--this.current;
 			}
+			// set URL hash
+			window.location.hash = this.current + 1;
 			// slide
-			this._slide();
+			this._transition();
 
 		},
-		_slide : function() {
+		_transition : function() {
 
 			// check which navigation arrows should be shown
 			this._toggleNavControls();
@@ -155,7 +187,16 @@
 			else {
 				transitionendfn.call();
 			}
+			
+			this._setActiveSlide(this.current);
 
+		},
+		_setActiveSlide : function(slideNum) {
+			
+			this.$items.removeClass('active');
+			this.$currSlide = this.$items[slideNum];
+			$( this.$currSlide ).addClass('active');
+			
 		},
 		_toggleNavControls : function() {
 
@@ -180,8 +221,10 @@
 			// update old and current values
 			this.old = this.current;
 			this.current = position;
+			// set hash
+			window.location.hash = this.current + 1;
 			// slide
-			this._slide();
+			this._transition();
 
 		},
 		destroy : function() {

@@ -1,0 +1,76 @@
+.slide4 {
+  .t1 {
+    top: 55px;
+    left: 135px;
+    width: 255px;
+    font-size: 16px;
+  }
+  .t2 {
+    top: 180px;
+    left: 110px;
+    width: 170px;
+  }
+  .t3 {
+    top: 275px;
+    left: 315px;
+    width: 395px;
+  }
+  .g1 {
+    @include transition-delay(0.25s);
+    width: 89px;
+    height: 345px;
+    background-color: $red3;
+    top: -300px;
+    left: 0;
+  }
+  .g2 {
+    background-color: black;
+    width: 90px;
+    height: 3px;
+    top: 0;
+    left: 0;
+  }
+  .g3 {
+    @include transition-delay(0.5s);
+    width: 205px;
+    height: 121px;
+    top: 400px;
+    left: 89px;
+    background-color: $red4;
+  }
+  .g4, .g5, .g6 {
+    width: 250px;
+    height: 160px;
+    opacity: 0;
+    transition: opacity 3s ease;
+  }
+  .g4 {
+    @include transition-delay(1s);
+    top: 33px;
+    left: 433px;
+    background-image: url("../images/4-arms1.png");
+  }
+  .g5 {
+    @include transition-delay(1.5s);
+    top: 10px;
+    left: 486px;
+    background-image: url("../images/4-arms2.png");
+  }
+  .g6 {
+    @include transition-delay(2s);
+    top: 5px;
+    left: 429px;
+    background-image: url("../images/4-arms3.png");
+  }
+  &.active {
+    .g1 {
+      top: 0;
+    }
+    .g3 {
+      top: 279px;
+    }
+    .g4, .g5, .g6 {
+      opacity: 1;
+    }
+  }
+}

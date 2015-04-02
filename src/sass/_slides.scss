@@ -1,7 +1,30 @@
 .slide {
+  position: relative;
+  div {
+    -webkit-transition: all $animDuration ease;
+    -moz-transition: all $animDuration ease;
+    transition: all $animDuration ease;
+    position: absolute;
+    white-space: normal;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
   width: $width;
   height: $height;
   background-color: white;
+  
+  ul {
+    white-space: normal !important;
+    li {
+      display: block;
+      float: none;
+      clear: both;
+    }
+  }
+}
+.light {
+  color: white;
 }
 
 .slide1 {background-image: url('../images/FM-Infographic5-animation_fm-info-slide1.png');}
@@ -12,3 +35,72 @@
 .slide6 {background-image: url('../images/FM-Infographic5-animation_fm-info-slide6.png');}
 .slide7 {background-image: url('../images/FM-Infographic5-animation_fm-info-slide7.png');}
 .slide8 {background-image: url('../images/FM-Infographic5-animation_fm-info-slide8.png');}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }  
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin transform($str) {
+  -webkit-transform: #{$str};
+  -moz-transform: #{$str};
+  -ms-transform: #{$str};
+  -o-transform: #{$str};
+  transform: #{$str};      
+}
+
+@include keyframes('cwRotate') {
+  from {@include transform('rotate(0deg)'); }  
+  to   {@include transform('rotate(360deg)'); }  
+}
+
+@include keyframes('ccwRotate') {
+  from {@include transform('rotate(360deg)'); }  
+  to   {@include transform('rotate(0deg)'); }  
+}
+
+@mixin transition($str) {
+  -webkit-transition: #{$str};
+  -moz-transition: #{$str};
+  -ms-transition: #{$str};
+  -o-transition: #{$str};
+  transition: #{$str};      
+}
+
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;      
+}
+
+@import 'slide1';
+@import 'slide2';
+@import 'slide3';
+@import 'slide4';
+@import 'slide5';
+@import 'slide6';
+@import 'slide7';
+@import 'slide8';

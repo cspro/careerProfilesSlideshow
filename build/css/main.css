@@ -1,12 +1,12 @@
 * {
-  font-family: "Open Sans", Verdana, sans-serif !important;
+  font-family: Verdana, sans-serif !important;
   font-size: 12px;
   color: #333;
   margin: 0;
 }
 
 body {
-  background-color: #bbbbbb;
+  background-color: transparent;
 }
 
 a {
